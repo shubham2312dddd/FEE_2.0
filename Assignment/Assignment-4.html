@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+     <style>
+:root {
+    --primary-color: #0073e6; 
+    --secondary-color: #f4f4f4; 
+    --accent-color: #3e050c; 
+    --background-color: #ffffff;  
+    --text-color: #333333; 
+    --header-footer-bg: #1a1a1a;  
+    --about-bg: #f0f8ff;
+    --projects-bg: #f9f9f9;  
+    --skills-bg: #042b3d; 
+    --testimonials-bg: #fffbf0; 
+    --contact-bg: #e9f7ef;  
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: var(--header-footer-bg);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+#about {
+    background-color: var(--about-bg);
+}
+
+#projects {
+    background-color: var(--projects-bg);
+}
+
+#skills {
+    background-color: var(--skills-bg);
+}
+
+#testimonials {
+    background-color: var(--testimonials-bg);
+}
+
+#contact {
+    background-color: var(--contact-bg);
+}
+
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-left-color: var(--accent-color);
+    background-color: var(--projects-bg);
+}
+
+.project h3 {
+    color: var(--primary-color);
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    background: var(--secondary-color);
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--skills-bg);
+}
+
+
+.testimonial {
+    background: var(--secondary-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-left-color: var(--primary-color);
+    background-color: var(--testimonials-bg);
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-weight: normal;
+    color: var(--primary-color);
+}
+
+/* Social Links */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+footer {
+    background: var(--header-footer-bg);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .skills-list {
+        flex-direction: column;
+    }
+}
+
+     </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>Hello! I'm Shubham, a passionate developer with experience in Front-End developer . I love creating web applications and learning new technologies.</p>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project">
+                <h3>Personal Finance Tracker</h3>
+                <p>The Personal Finance Tracker is a web application designed to help users manage their finances efficiently...</p>
+            </div>
+            <div class="project">
+                <h3>Online Bookstore</h3>
+                <p>The Online Bookstore is an e-commerce web application where users can browse, search, and purchase books online...</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Python & Django</li>
+            <li>SQL & NoSQL Databases</li>
+        </ul>
+    </section>
+
+    <section id="testimonials" class="container">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+            <p>"Shubham was a pleasure to work with and delivered high-quality code on time. Their attention to detail is exceptional!"</p>
+            <h4>- Client Name, Company</h4>
+        </div>
+        <div class="testimonial">
+            <p>"Shubham's ability to understand and implement complex requirements made them an invaluable part of our team."</p>
+            <h4>- Client Name, Company</h4>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, feel free to email me at <a href="mailto:your.email@example.com">Shubham2529.be23@chitkara.edu.in</a>.</p>
+        <p>Follow me on:</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
